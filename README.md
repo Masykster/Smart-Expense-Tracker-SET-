@@ -72,7 +72,7 @@ Proyek ini dibangun menggunakan teknologi modern untuk memastikan performa yang 
 
 | Dashboard Utama | Tambah Transaksi |
 | :---: | :---: |
-| *(Letakkan gambar Dashboard di sini)* | *(Letakkan gambar Form di sini)* |
+| *<img width="2620" height="2634" alt="Image" src="https://github.com/user-attachments/assets/d8b3198d-f939-4a65-afbb-4521190cf153" />* | *<img width="451" height="580" alt="Image" src="https://github.com/user-attachments/assets/8a05d784-9930-410c-b5a6-bf1ab5795d4c" />* |
 
 ---
 
@@ -142,3 +142,4 @@ Proyek ini dilisensikan di bawah lisensi [MIT](LICENSE).
 <p align="center">
   Dibuat dengan ❤️ oleh <a href="https://github.com/Masykster">Masykster</a>
 </p>
+
