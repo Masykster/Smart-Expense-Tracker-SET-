@@ -34,8 +34,8 @@ Aplikasi web sederhana untuk mencatat arus kas masuk/keluar dan menghasilkan vis
 
 ### Clone Repository
 ```bash
-git clone https://github.com/USERNAME/REPO_NAME.git
-cd REPO_NAME
+git clone https://github.com/Masykster/Smart-Expense-Tracker-SET-.git
+cd Smart-Expense-Tracker-SET-
 ```
 
 ### Setup Konfigurasi
@@ -206,4 +206,5 @@ Kemudian buka browser: `http://localhost:8000`
 ## License
 
 MIT License
+
 
