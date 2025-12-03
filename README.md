@@ -1,210 +1,144 @@
-# Smart Expense Tracker (SET)
+# 💰 Smart Expense Tracker (SET)
 
-Aplikasi web sederhana untuk mencatat arus kas masuk/keluar dan menghasilkan visualisasi data otomatis menggunakan Python.
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
+![License](https://img.shields.io/badge/license-MIT-blue)
+![Version](https://img.shields.io/badge/version-1.0.0-orange)
+![Status](https://img.shields.io/badge/status-active-success)
 
-## Teknologi yang Digunakan
-
-- **Backend:** PHP 8.x (Native)
-- **Data Processing & Visualization:** Python 3.x (Matplotlib, Pandas)
-- **Frontend:** HTML/CSS (Bootstrap 5) + JavaScript (Vanilla)
-- **Database:** MySQL/MariaDB
-
-## Fitur
-
-### 1. Modul Transaksi (CRUD)
-- ✅ Create: Tambah transaksi baru
-- ✅ Read: Tampilkan daftar transaksi
-- ✅ Update: Edit transaksi
-- ✅ Delete: Hapus transaksi (dilindungi trigger)
-
-### 2. Modul Pencarian
-- ✅ Live Search: Pencarian real-time tanpa reload halaman
-
-### 3. Modul Visualisasi
-- ✅ Generate Chart: Pie chart pemasukan vs pengeluaran
-- ✅ Auto-generate: Chart otomatis dibuat saat halaman dimuat
-
-### 4. Fitur Database Advanced
-- ✅ **View:** `v_ringkasan_bulanan` - Ringkasan bulanan
-- ✅ **Stored Procedure:** `sp_tambah_transaksi` - Menambah transaksi dengan validasi
-- ✅ **Function:** `fn_cek_kesehatan_finansial` - Cek status finansial
-- ✅ **Trigger:** `tr_audit_hapus` - Audit log saat hapus transaksi
-
-## 🚀 Quick Start
-
-### Clone Repository
-```bash
-git clone https://github.com/Masykster/Smart-Expense-Tracker-SET-.git
-cd Smart-Expense-Tracker-SET-
-```
-
-### Setup Konfigurasi
-```bash
-# Copy example config
-cp config/database.example.php config/database.php
-
-# Edit config/database.php dengan kredensial database Anda
-```
-
-### Setup Database
-```bash
-mysql -u root -p < database/schema.sql
-```
-
-### Install Dependencies
-```bash
-# Python dependencies
-python -m pip install -r requirements.txt
-# Atau gunakan: install_dependencies.bat (Windows)
-```
-
-### Jalankan Aplikasi
-```bash
-php -S localhost:8000
-```
-
-Buka browser: `http://localhost:8000`
+> **Kelola keuanganmu dengan cerdas, hemat lebih banyak, dan raih kebebasan finansial.**
 
 ---
 
-## Instalasi
+## 📋 Daftar Isi
+- [Tentang Proyek](#-tentang-proyek)
+- [Fitur Utama](#-fitur-utama)
+- [Teknologi yang Digunakan](#-teknologi-yang-digunakan)
+- [Demo / Screenshot](#-demo--screenshot)
+- [Instalasi & Jalankan](#-instalasi--jalankan)
+- [Kontribusi](#-kontribusi)
+- [Lisensi](#-lisensi)
 
-### 1. Persyaratan
-- PHP 8.x atau lebih tinggi
-- Python 3.x
-- MySQL/MariaDB
-- Web server (Apache/Nginx) atau PHP built-in server
-- Extension PHP: `mysqli`, `shell_exec` enabled
+---
 
-### 2. Setup Database
+## 📖 Tentang Proyek
 
-1. Import schema database:
-```bash
-mysql -u root -p < database/schema.sql
-```
+**Smart Expense Tracker (SET)** adalah aplikasi manajemen keuangan yang dirancang untuk membantu pengguna melacak pendapatan dan pengeluaran harian secara efisien. Proyek ini bertujuan untuk menggantikan pencatatan manual yang membosankan dengan antarmuka yang modern, intuitif, dan *user-friendly*.
 
-Atau buka phpMyAdmin dan import file `database/schema.sql`
+Dengan analisis data yang visual, pengguna dapat memahami pola pengeluaran mereka dan membuat keputusan finansial yang lebih baik.
 
-2. Konfigurasi database di `config/database.php`:
-```php
-define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASS', '');
-define('DB_NAME', 'expense_tracker');
-```
+---
 
-### 3. Setup Python
+## ✨ Fitur Utama
 
-1. Install dependencies Python:
-```bash
-pip install -r requirements.txt
-```
+🚀 **Manajemen Transaksi**
+Catat pemasukan dan pengeluaran dengan mudah dan cepat.
 
-Atau install manual:
-```bash
-pip install mysql-connector-python matplotlib pandas
-```
+📊 **Visualisasi Data**
+Grafik interaktif (Pie Chart/Bar Chart) untuk melihat distribusi pengeluaran berdasarkan kategori.
 
-2. Pastikan Python dapat diakses dari command line:
-```bash
-python --version
-```
+🏷️ **Kategorisasi Cerdas**
+Kelompokkan transaksi ke dalam kategori seperti Makanan, Transportasi, Hiburan, dll.
 
-### 4. Setup Direktori
+📅 **Filter Riwayat**
+Lihat riwayat transaksi berdasarkan harian, mingguan, atau bulanan.
 
-Pastikan direktori untuk chart sudah ada:
-```bash
-mkdir -p assets/charts
-```
+📱 **Desain Responsif**
+Tampilan yang nyaman digunakan baik di Desktop maupun Mobile.
 
-Atau buat manual folder `assets/charts/` di root project.
+💾 **Ekspor Data** *(Coming Soon)*
+Fitur untuk mengunduh laporan keuangan dalam format CSV atau PDF.
 
-### 5. Jalankan Aplikasi
+---
 
-**Menggunakan PHP Built-in Server:**
-```bash
-php -S localhost:8000
-```
+## 🛠 Teknologi yang Digunakan
 
-Kemudian buka browser: `http://localhost:8000`
+Proyek ini dibangun menggunakan teknologi modern untuk memastikan performa yang cepat dan kode yang bersih:
 
-**Menggunakan Web Server (Apache/Nginx):**
-- Copy project ke `htdocs` atau `www` directory
-- Akses melalui browser sesuai konfigurasi web server
+**Frontend:**
+* ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+* ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+* ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
-## Struktur Project
+**Backend (Opsional/Sesuaikan):**
+* ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+* ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 
-```
-.
-├── api/                    # API endpoints
-│   ├── add_transaction.php
-│   ├── update_transaction.php
-│   ├── delete_transaction.php
-│   ├── get_transactions.php
-│   └── get_summary.php
-├── assets/
-│   └── charts/            # Folder untuk menyimpan chart PNG
-├── config/
-│   └── database.php       # Konfigurasi database
-├── database/
-│   └── schema.sql         # SQL schema dan setup
-├── python/
-│   └── generate_chart.py  # Script Python untuk generate chart
-├── index.php              # Halaman utama/dashboard
-└── README.md
-```
+**Database:**
+* ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
 
-## Penggunaan
+---
 
-### Menambah Transaksi
-1. Klik tombol "Tambah Transaksi"
-2. Isi form: Tanggal, Jenis (Masuk/Keluar), Kategori, Nominal, Keterangan
-3. Klik "Simpan"
+## 📷 Demo / Screenshot
 
-### Mencari Transaksi
-- Ketikkan kata kunci di kolom pencarian
-- Tabel akan terfilter secara otomatis
+| Dashboard Utama | Tambah Transaksi |
+| :---: | :---: |
+| *(Letakkan gambar Dashboard di sini)* | *(Letakkan gambar Form di sini)* |
 
-### Edit Transaksi
-- Klik tombol edit (ikon pensil) pada transaksi yang ingin diubah
-- Ubah data yang diperlukan
-- Klik "Update"
+---
 
-### Hapus Transaksi
-- Klik tombol hapus (ikon trash) pada transaksi yang ingin dihapus
-- Konfirmasi penghapusan
-- Data akan tersimpan di `tb_log_hapus` (audit log)
+## ⚡ Instalasi & Jalankan
 
-## Catatan Penting
+Ikuti langkah-langkah di bawah ini untuk menjalankan proyek ini di komputer lokal kamu (Localhost).
 
-1. **Python Path:** Jika perintah `python` tidak bekerja, ubah di file PHP yang memanggil script Python:
-   - Ganti `python` dengan `python3` atau path lengkap ke Python executable
+### Prasyarat
+Pastikan kamu sudah menginstall:
+* Git
+* [Bahasa/Framework utama, misal: Python / Node.js]
+* Database [misal: MySQL / PostgreSQL]
 
-2. **Permission:** Pastikan folder `assets/charts/` memiliki permission write untuk menyimpan file chart
+### Langkah-langkah
 
-3. **Database:** Pastikan user database memiliki permission untuk:
-   - CREATE, SELECT, INSERT, UPDATE, DELETE
-   - CREATE VIEW, CREATE PROCEDURE, CREATE FUNCTION, CREATE TRIGGER
+1.  **Clone Repositori**
+    ```bash
+    git clone [https://github.com/Masykster/Smart-Expense-Tracker-SET-.git](https://github.com/Masykster/Smart-Expense-Tracker-SET-.git)
+    cd Smart-Expense-Tracker-SET-
+    ```
 
-## Troubleshooting
+2.  **Install Dependencies**
+    ```bash
+    # Contoh jika pakai Python
+    pip install -r requirements.txt
+    
+    # Atau jika pakai Node.js
+    npm install
+    ```
 
-### Chart tidak muncul
-- Pastikan Python script dapat dijalankan
-- Cek permission folder `assets/charts/`
-- Cek error log PHP untuk detail error
+3.  **Konfigurasi Database**
+    * Buat database baru bernama `expense_tracker`.
+    * Import file SQL (jika ada) di folder `/database`.
+    * Sesuaikan konfigurasi koneksi di file `.env` atau `config`.
 
-### Database connection error
-- Pastikan MySQL/MariaDB berjalan
-- Cek konfigurasi di `config/database.php`
-- Pastikan database `expense_tracker` sudah dibuat
+4.  **Jalankan Aplikasi**
+    ```bash
+    # Contoh command run
+    python main.py
+    # atau
+    npm start
+    ```
 
-### Python script error
-- Pastikan semua dependencies terinstall
-- Cek koneksi database dari Python
-- Pastikan MySQL connector Python terinstall
+5.  **Selesai!**
+    Buka browser dan akses `http://localhost:3000` (atau port yang sesuai).
 
-## License
+---
 
-MIT License
+## 🤝 Kontribusi
 
+Kontribusi sangat diterima! Jika kamu ingin meningkatkan fitur atau memperbaiki bug:
 
+1.  Fork repositori ini.
+2.  Buat branch fitur baru (`git checkout -b fitur-keren`).
+3.  Commit perubahan kamu (`git commit -m 'Menambahkan fitur keren'`).
+4.  Push ke branch tersebut (`git push origin fitur-keren`).
+5.  Buat Pull Request.
+
+---
+
+## 📝 Lisensi
+
+Proyek ini dilisensikan di bawah lisensi [MIT](LICENSE).
+
+---
+
+<p align="center">
+  Dibuat dengan ❤️ oleh <a href="https://github.com/Masykster">Masykster</a>
+</p>
